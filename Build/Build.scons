@@ -8,7 +8,6 @@ from glob import glob
 #######################################################
 def LoadTool(name, env, **kw):
     config_path = Path("/home/fabreezy/platinum_solution/Platinum/Build/Tools/SCons/gcc-generic.py")
-    breakpoint()
     loader = importlib.machinery.SourceFileLoader('gcc-generic', str(config_path))
     spec = importlib.util.spec_from_loader(loader.name, loader)
     mod = importlib.util.module_from_spec(spec)
